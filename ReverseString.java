@@ -5,14 +5,10 @@ public class ReverseString {
         System.out.println(reverseStr(testString));
     }
 
-    public static String reverseStr(String testString){
-
-        if (testString.length()==1){
-            return testString.substring(1)+testString.substring(0,1);
-        } else {
-            testString = reverseStr(testString.substring(1))+testString.substring(0,1);
+    public static String  reverseStr(String testString){
+        if (testString.length() < 2){
             return testString;
-        }
+        } else return reverseStr(testString.substring(1))+testString.charAt(0);
     }
 
 }
