@@ -1,5 +1,4 @@
 import java.util.Stack;
-import java.util.regex.Pattern;
 
 public class BackspacesInString {
 
