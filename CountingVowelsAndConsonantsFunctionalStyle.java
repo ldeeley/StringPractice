@@ -9,23 +9,23 @@ public class CountingVowelsAndConsonantsFunctionalStyle {
         String lifeOnMarsString = Files.readString(Path.of("lifeonmars.txt"));
         lifeOnMarsString = lifeOnMarsString.toLowerCase();
 
-        long vowelCount = lifeOnMarsString.chars()
+        lifeOnMarsString.chars()
                 .mapToObj(c->(char) c)
                 .filter(character -> {
                     String characterString = character+"";
-                    return characterString.matches("[aeiou]");
+                    return characterString.matches("[[a-z]-[^aeiou]]");
                 })
-                .count();
+                .forEach(System.out::println);
 
-        long consonantCount = lifeOnMarsString.chars()
-                .mapToObj(c->(char) c)
-                .filter(character -> {
-                    String characterString = character+"";
-                    return characterString.matches("[a-z-[^aeiou]]");
-                })
-                .count();
-        System.out.println(consonantCount);
-        System.out.println(vowelCount);
+//        lifeOnMarsString.chars()
+//                .mapToObj(c->(char) c)
+//                .filter(character -> {
+//                    String characterString = character+"";
+//                    return characterString.matches("[a-z-[^aeiou]]*");
+//                })
+//                .forEach(System.out::println);
+//     //   System.out.println(consonantCount);
+//        System.out.println(vowelCount);
 
 
     }
