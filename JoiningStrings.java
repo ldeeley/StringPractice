@@ -1,3 +1,5 @@
+import java.util.StringJoiner;
+
 public class JoiningStrings {
 
     public static void main(String[] args) {
@@ -14,6 +16,9 @@ public class JoiningStrings {
         sbr.append(str1).append(str2).append(str3).append(str4);
         System.out.println(sbr.reverse());
 
+        StringJoiner joiner = new StringJoiner("*","£","%");
+        joiner.add(str1).add(str2).add(str3).add(str4);
+        System.out.println(joiner.toString());
 
     }
 
